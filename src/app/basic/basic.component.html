@@ -1,0 +1,16 @@
+<table mat-table *ngIf="dataSource" [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container *ngFor="let oszlop of displayedColumns"    
+    [matColumnDef]="oszlop">
+      <th mat-header-cell *matHeaderCellDef>{{oszlop}}</th>
+      <td mat-cell *matCellDef="let element"> {{element[oszlop]}} </td>
+    </ng-container> 
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  <mat-paginator #paginator class="mat-elevation-z8"
+                [length]="100"
+              [pageSize]="4"
+              [pageSizeOptions]="[2, 4, 6, 10]"
+              aria-label="Select page">
+</mat-paginator>

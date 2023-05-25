@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+mat-sidenav-container{
+    flex: 1 1 100%
+}
+mat-sidenav{
+    background: #3f51b5;
+    color:white;
+}
+mat-list-item a{
+    color:white;
+}
+mat-sidenav-content{
+    padding: 2rem;
+}
